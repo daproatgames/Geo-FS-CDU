@@ -778,7 +778,28 @@ function bootCduPad() {
     if (++tries > 40 || document.getElementById("geofs-cdu-pad")) clearInterval(t);
   }, 250);
 }
+// -------------------- Keyboard toggle for CDU --------------------
+function toggleCDU() {
+  const r = document.getElementById("unique-geofs-cdu");
+  if (!r) {
+    mount(); // create + show
+  } else {
+    r.style.display = (r.style.display === "none") ? "block" : "none";
+  }
+}
 
+document.addEventListener("keydown", (e) => {
+  // prevent firing while typing into inputs
+  const tag = document.activeElement?.tagName;
+  if (tag === "INPUT" || tag === "TEXTAREA") return;
+
+  // F9 toggles CDU
+  if (e.key === "F9") {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleCDU();
+  }
+}, true);
   function boot() {
     // addButton();
     bootCduPad();

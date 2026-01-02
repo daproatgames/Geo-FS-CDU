@@ -91,7 +91,7 @@
     return { ok: true, dom };
   }
 
-  // Route import from GeoFS nav.flightPlan when available; else DOM idents
+  // Route import from GeoFS nav.flightPlan when available; or else DOM idents
   function importFlightPlan() {
     const legs = [];
 
@@ -107,7 +107,7 @@
       return legs;
     }
 
-    // Fallback: DOM waypoint labels (no lat/lon)
+    // Fallback method DOM waypoint labels (no lat/lon)
     const nodes = [...document.querySelectorAll(".geofs-waypointIdent")];
     for (const n of nodes) {
       const ident = (n.textContent || "").trim().toUpperCase().replace(/[0-9\.\,\s-]+$/, "").trim();

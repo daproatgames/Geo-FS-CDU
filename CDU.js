@@ -2,7 +2,7 @@
 // @name         GeoFS CDU - (AIRCRAFT + VNAV-Lite + DIR + LEGS + AP)
 // @namespace    ButterMasterr.geofs.cdu
 // @version      1.0
-// @description  Unique CDU for GeoFS: aircraft profiles, VNAV-lite T/D, DIR-TO bearing, legs import, and AP targets via EXEC.
+// @description  CDU for GeoFS: aircraft profiles, VNAV-lite T/D, DIR-TO bearing, legs import, and AP targets via EXEC.
 // @author       ButterMasterr
 // @match        *://www.geo-fs.com/*
 // @grant        none

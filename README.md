@@ -108,6 +108,9 @@ Then press **EXEC** to apply.
 - This was a past project I forgot to upload, but it is here now.
 ---
 
+## Known Issues:
+- Top of descent estimate doesn't function properly.
+---
 ## License
 There is a MIT License. Personal/educational use. If you share it, credit the author of this unique script and don’t re-upload as someone else’s work.
 

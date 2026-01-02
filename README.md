@@ -1,5 +1,5 @@
 
-# GeoFS CDU - Unique Suite (AIRCRAFT + VNAV-Lite + DIR + LEGS + AP)
+# GeoFS CDU Suite (AIRCRAFT + VNAV-Lite + DIR + LEGS + AP)
 
 A lightweight CDU-style control panel for GeoFS that can **stage** changes (MOD) and **apply** them with **EXEC**.  
 Includes **AP target control**, **route/legs import**, **DIR-TO bearing**, and a **VNAV-Lite top-of-descent estimate**.

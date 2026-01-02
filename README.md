@@ -110,3 +110,8 @@ Then press **EXEC** to apply.
 
 ## License
 There is a MIT License. Personal/educational use. If you share it, credit the author of this unique script and don’t re-upload as someone else’s work.
+
+## Acknowledgements
+Some development assistance and iteration was supported by AI tools.
+All design decisions, testing, integration with GeoFS, and final implementation
+were done by me.

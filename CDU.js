@@ -745,9 +745,43 @@
     };
     document.body.appendChild(btn);
   }
+  // -------------------- GeoFS CDU pad under RADIO --------------------
+function addCduPadBelowRadio() {
+  if (document.getElementById("geofs-cdu-pad")) return;
+
+  const radioPad = document.querySelector(".geofs-radio-pad");
+  if (!radioPad || !radioPad.parentNode) return;
+
+  const cduPad = document.createElement("div");
+  cduPad.id = "geofs-cdu-pad";
+  cduPad.className = "control-pad blue-pad geofs-visible geofs-manipulator";
+  cduPad.tabIndex = 0;
+  cduPad.style.width = "50px";
+  cduPad.style.height = "25px";
+  cduPad.innerHTML = `<div class="control-pad-label transp-pad">CDU</div>`;
+  cduPad.title = "Open CDU";
+
+  cduPad.onclick = () => {
+    const r = document.getElementById("unique-geofs-cdu");
+    if (!r) mount();
+    else r.style.display = r.style.display === "none" ? "block" : "none";
+  };
+
+  radioPad.parentNode.insertBefore(cduPad, radioPad.nextSibling);
+}
+
+// retry because GeoFS UI loads async
+function bootCduPad() {
+  let tries = 0;
+  const t = setInterval(() => {
+    addCduPadBelowRadio();
+    if (++tries > 40 || document.getElementById("geofs-cdu-pad")) clearInterval(t);
+  }, 250);
+}
 
   function boot() {
-    addButton();
+    // addButton();
+    bootCduPad();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);

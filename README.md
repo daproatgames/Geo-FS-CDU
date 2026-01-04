@@ -110,6 +110,10 @@ Then press **EXEC** to apply.
 
 ## Known Issues:
 - Top of descent estimate doesn't function properly.
+
+## Fixed Issues (V1.3):
+- Sim crashed when executing new values in AP CTRL menu.
+  For example, when adding a new speed then executing, the sim would crash due to a memory issue.
 ---
 ## License
 There is a MIT License. Personal/educational use. If you share it, credit the author of this unique script and don’t re-upload as someone else’s work.
